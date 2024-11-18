@@ -1,0 +1,469 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding-top: 60px; /* Adjust based on the height of your fixed header */
+}
+
+
+/* Header and Navbar */
+header {
+    position: fixed; /* Fixed position for the header */
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to right, #ffffff, #ADD8E6); 
+    color: #ffffff;
+    height: 60px; /* Height of the navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.navbar {
+    width: 100%;
+    height: 100%; /* Ensure it takes the full height of header */
+    max-width: 1200px;
+    background: linear-gradient(to right, #ffffff, #ADD8E6); 
+    color: #ffffff;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+/* Style for the logo container */
+/* Style for the navbar container */
+
+/* Style for the logo container */
+.navbar .logo {
+    margin-right: auto; /* Push the logo to the right side */
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Style for the logo image */
+.navbar .logo img {
+    max-width: 100%; /* Ensure the image is responsive and scales properly */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 60px; /* Set maximum height to fit within the navbar */
+    display: block; /* Remove any extra space below the image */
+}
+
+
+
+.navbar .links {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 15px;
+}
+
+.navbar .links li {
+
+    list-style: none;
+}
+
+.navbar .links li a {
+    color: #e93f21; /* Bright yellow */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar .links li a:hover {
+    background-color: rgba(255, 0, 0, 0.856);
+    color: white;
+}
+
+.navbar .action_btn {
+    background-color: #fa5751; /* Bright blue */
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar .action_btn:hover {
+    background-color: #fd0303; /* Darker blue hover */
+    transform: scale(1.05);
+}
+
+.navbar .toggle_btn {
+    color: #FFFFFF;;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown_menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px; /* Align with header height */
+    width: 200px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none; /* Initially hidden */
+    z-index: 9;
+}
+
+.dropdown_menu.open {
+    display: block; /* Show when the 'open' class is added */
+}
+
+.dropdown_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown_menu li {
+    text-align: center;
+}
+
+.dropdown_menu li a {
+    display: block;
+    padding: 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown_menu li a:hover {
+    background-color: rgba(34, 136, 64, 0.1);
+}
+
+
+/* Style for the h1 tag */
+
+
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the h1 */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: left; /* Align the text to the left */
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding: 20px; /* Add 20px padding */
+    background-color: #7c7272; /* Optional: Add background color to see padding effect */
+    border-radius: 5px;
+}
+
+/* Style for the map container */
+.map-container {
+    max-width: 100%;
+    overflow: hidden;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Responsive iframe height */
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container iframe {
+        height: 250px;
+    }
+}
+
+/* Container for contact details and form */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style for contact information */
+.contacts-info {
+    flex: 1 1 45%; /* Takes 45% width of the container */
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual info items */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+.info-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Form container */
+.form-container {
+    flex: 1 1 45%; /* Default width on larger screens */
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 25px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ensure it doesn't exceed full width */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-left: -7px;
+    margin-right: 10px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+form textarea {
+    min-height: 100px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    h1 {
+        font-size: 2rem; /* Adjust font size for tablets */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+    .contacts-info,
+    .form-container {
+        flex: 1 1 90%;
+        max-width: 600px; /* Set max width for larger tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts-info {
+        flex: 1 1 100%; /* Both containers take 100% width */
+        max-width: 100%; /* Remove the 90% max-width, set it to 100% */
+        padding: 10px; /* Ensure padding is consistent */
+        margin: 0; /* Remove margin to prevent extra spacing */
+    }
+
+    .form-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 49px;
+        margin: 1px 0px;
+     /* Remove margin to prevent extra spacing */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Adjust font size for mobile devices */
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    form input,
+    form textarea {
+        font-size: 1rem; /* Slightly increase input font size */
+    }
+
+    form button {
+        font-size: 1rem; /* Slightly increase button font size */
+    }
+
+    .info-item i {
+        font-size: 1.2rem;
+    }
+
+    .info-item h4 {
+        font-size: 1rem;
+    }
+
+    .info-item p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #282828;
+    color: #fff;
+    padding: 3rem 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.footer-content h3, .footer-content h4 {
+    color: #fa5751;
+    margin-bottom: 1rem;
+}
+
+.company-info p {
+    color: #ffffff;
+}
+
+.address-info p {
+    color: #ffffff;
+}
+
+.contact-info li {
+    color: #ffffff;
+}
+
+
+
+
+.footer-content p, .footer-content ul {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-content ul li i {
+    color: #e6e0d3;
+    margin-right: 10px;
+}
+
+.footer-content a {
+    color: #f0ead9;
+    text-decoration: none;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    color: #999999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        right: 1rem;
+        top: 70px;
+        width: 100%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+

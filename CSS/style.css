@@ -1,0 +1,872 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #F4F4F4;
+    color: #333333;
+    padding-top: 60px; /* Adjust based on the height of your fixed header */
+}
+
+/* Header and Navbar */
+header {
+    position: fixed; /* Fixed position for the header */
+    top: 0;
+    width: 100%;
+    height: 60px; /* Height of the navbar */
+    background: linear-gradient(to right, #ffffff, #ADD8E6); 
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.navbar {
+    width: 100%;
+    height: 100%; /* Ensure it takes the full height of header */
+    max-width: 1200px;
+    background: linear-gradient(to right, #ffffff, #ADD8E6); 
+    color: #ffffff;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+/* Style for the logo container */
+/* Style for the navbar container */
+
+/* Style for the logo container */
+.navbar .logo {
+    margin-right: auto; /* Push the logo to the right side */
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Style for the logo image */
+.navbar .logo img {
+    max-width: 100%; /* Ensure the image is responsive and scales properly */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 60px; /* Set maximum height to fit within the navbar */
+    display: block; /* Remove any extra space below the image */
+}
+
+
+
+.navbar .links {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 15px;
+}
+
+.navbar .links li {
+
+    list-style: none;
+}
+
+.navbar .links li a {
+    color: #e93f21; /* Bright yellow */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar .links li a:hover {
+    background-color: rgba(255, 0, 0, 0.856);
+    color: white;
+}
+
+.navbar .action_btn {
+    background-color: #fa5751; /* Bright blue */
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar .action_btn:hover {
+    background-color: #fd0303; /* Darker blue hover */
+    transform: scale(1.05);
+}
+
+.navbar .toggle_btn {
+    color: #FFFFFF;;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown_menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px; /* Align with header height */
+    width: 200px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none; /* Initially hidden */
+    z-index: 9;
+}
+
+.dropdown_menu.open {
+    display: block; /* Show when the 'open' class is added */
+}
+
+.dropdown_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown_menu li {
+    text-align: center;
+}
+
+.dropdown_menu li a {
+    display: block;
+    padding: 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown_menu li a:hover {
+    background-color: rgba(34, 136, 64, 0.1);
+}
+
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background: url('../IMAGES/heroSection.jpg') no-repeat center center/cover; /* Replace with your image URL */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    width: 100%; /* Full width */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px; /* Increased width for better readability */
+    padding: 20px; /* Adjust as needed */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Default font size */
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5rem; /* Default paragraph size */
+    margin-bottom: 30px;
+    color: #F4F4F4;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #fa5751; /* Bright yellow */
+    color: #FFFFFF;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #fd0303; /* Burnt orange */
+    transform: scale(1.05);
+}
+
+.secondary-btn {
+    background-color: #333333; /* Dark grey */
+    color: #FFFFFF;
+}
+
+.secondary-btn:hover {
+    background-color: #fd0303;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Smaller font size for larger tablets */
+        color: #FFFFFF;
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Adjust font size for larger tablets */
+    }
+
+    .cta-btn {
+        padding: 12px 24px; /* Slightly smaller buttons */
+    }
+}
+
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2rem; /* Smaller font size for tablets */
+        color: #FFFFFF;
+    }
+
+    .hero p {
+        font-size: 1.1rem; /* Adjust font size for tablets */
+    }
+
+    .cta-btn {
+        padding: 10px 20px; /* Adjust button size */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh; /* Adjust height for smaller devices */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem; /* Further reduce heading size */
+        color: #FFFFFF;
+    }
+
+    .hero p {
+        font-size: 1rem; /* Reduce paragraph size */
+    }
+
+    .cta-btn {
+        padding: 10px 15px; /* Adjust button size */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 70vh; /* Adjust height for mobile devices */
+    }
+
+    .hero h1 {
+        font-size: 1rem; /* Further reduce heading size for mobile */
+        color: #FFFFFF;
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Further reduce paragraph size for mobile */
+    }
+
+    .cta-btn {
+        padding: 6px 9px; /* Adjust button size */
+    }
+}
+
+
+
+
+
+/* Main Content */
+main {
+    padding: 0rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #282828;
+    color: #fff;
+    padding: 3rem 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.footer-content h3, .footer-content h4 {
+    color: #fa5751;
+    margin-bottom: 1rem;
+}
+
+.footer-content p, .footer-content ul {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-content ul li i {
+    color: #e6e0d3;
+    margin-right: 10px;
+}
+
+.footer-content a {
+    color: #f0ead9;
+    text-decoration: none;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    color: #999999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        right: 1rem;
+        top: 70px;
+        width: 100%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* -------main section --------*/
+
+/* Main Headings */
+main h1 {
+    text-align: center;
+    color: #dd262f;
+    font-weight: bold;
+    margin-bottom: 40px; /* Spacing below h1 */
+    margin-top: 30px;
+}
+
+main h3 {
+    text-align: center;
+    color: #2C3E50;
+    font-weight: bold;
+    margin-bottom: 40px; /* Spacing below h3 */
+    margin-top: 30px;
+}
+
+/* Icon-Quotes Section Styling */
+.icon-quotes-section {
+    display: flex;
+    justify-content: space-between; /* Evenly space between items */
+    align-items: center;
+    padding: 15px;
+    max-width: 1200px; /* Set a max-width for the section */
+    margin: 0 auto; /* Center the section */
+}
+
+/* Each icon-quote div */
+.icon-quote {
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    height: auto; /* Allow height to adjust based on content */
+    flex: 1; /* Make each div grow to fill space equally */
+    margin: 0 10px; /* Add spacing between divs */
+}
+
+/* Icon Styling */
+.icon-quote i {
+    font-size: 3rem;
+    color: #ff1c1c;
+    margin-bottom: 30px; /* Reduced margin for better spacing */
+}
+
+/* Quote Styling */
+.icon-quote p {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Hover effect for icon-quote div */
+.icon-quote:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .icon-quote {
+        margin: 0 5px; /* Adjust spacing for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .icon-quotes-section {
+        flex-direction: column; /* Stack divs vertically on smaller screens */
+        align-items: center;
+    }
+
+    .icon-quote {
+        width: 80%; /* Set width for smaller screens */
+        margin-bottom: 20px; /* Space below each item */
+    }
+}
+
+/* About Section Styling */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+/* About Content Flexbox */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* About Image Styling */
+.about-image {
+    flex: 1;
+    padding: 20px;
+    max-height: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto; /* Adjust height automatically */
+    max-height: 500px; /* Set maximum height */
+    object-fit: cover; /* Ensures the image doesn't get distorted */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* About Text Styling */
+.about-text {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 500px;
+    margin: 0 10px;
+}
+
+/* Heading and Paragraphs */
+.about-text h3 {
+    font-size: 2rem;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* About Button Styling */
+.about-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fa5751;
+    color: #FFFFFF;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Button Hover Effect */
+.about-btn:hover {
+    background-color: #fd0303;
+    transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image, .about-text {
+        flex: 1;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .about-image img {
+        height: auto; /* Ensure image scales down naturally */
+    }
+
+    .about-text {
+        margin: 0; /* Remove margins for smaller screens */
+    }
+}
+
+/* Tablet Portrait and Smaller Devices */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 0 20px;
+    }
+
+    .about-text h3 {
+        font-size: 1.75rem; /* Adjust heading size for smaller screens */
+    }
+
+    .about-image img {
+        height: auto; /* Further scale images */
+        max-height: 300px; /* Limit height for smaller screens */
+    }
+
+    .about-text p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .about-btn {
+        padding: 10px 18px; /* Slightly adjust button size */
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .about-section {
+        padding: 10px 5px; /* Reduce padding for mobile */
+    }
+
+    .about-content {
+        padding: 0;
+    }
+
+    .about-text h3 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    .about-text p {
+        font-size: 0.9rem; /* Further reduce paragraph font size */
+    }
+
+    .about-btn {
+        padding: 8px 16px; /* Adjust button size for mobile */
+    }
+
+    .about-image img {
+        max-height: 250px; /* Reduce image height for mobile screens */
+        object-fit: cover; /* Keep the aspect ratio intact */
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+    .about-text h3 {
+        font-size: 1.4rem; /* Further reduce heading size */
+    }
+
+    .about-text p {
+        font-size: 0.85rem; /* Further reduce paragraph font size */
+    }
+
+    .about-btn {
+        padding: 6px 14px; /* Adjust button size for extra small screens */
+    }
+
+    .about-image img {
+        max-height: 220px; /* Further reduce image height */
+    }
+}
+
+
+/* Quote Image Section */
+.quote-image-section {
+    display: flex;
+    align-items: center;
+    margin: 40px 0px; /* Adjust margins for smaller screens */
+    height: auto; /* Adjust height to auto to accommodate flexible content */
+    position: relative; /* Ensure the section contains positioned children */
+}
+
+.quote-image-container {
+    flex: 1; /* Ensure the image takes up as much space as available */
+    position: relative;
+    height: 500px; /* Default height */
+    overflow: hidden; /* Ensure overflow is hidden */
+}
+
+.quote-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Overlay Styling */
+.quote-overlay {
+    position: absolute;
+    left: 0; /* Align overlay to the left side */
+    top: 0;
+    height: 100%; /* Match height of the image */
+    width: 40%; /* Adjust width as needed */
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text contrast */
+    padding: 20px; /* Adjust padding as needed */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Blockquote Styling */
+.quote-overlay blockquote {
+    margin: 0;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.quote-overlay p {
+    margin-bottom: 1rem;
+}
+
+/* Quote Button Styling */
+.quote-btn {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #fa5751;    
+    color: #FFFFFF;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start; /* Align button to the start of the overlay */
+}
+
+/* Quote Button Hover Effect */
+.quote-btn:hover {
+    background-color: #fd0303;
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments for Quote Section */
+@media (max-width: 1200px) {
+    .quote-image-container {
+        height: 250px; /* Adjust height for medium screens */
+    }
+
+    .quote-overlay {
+        width: 50%; /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .quote-image-container {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .quote-overlay {
+        width: 60%; /* Adjust width for smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-image-container {
+        height: 200px; /* Further adjust height for mobile */
+    }
+
+    .quote-overlay {
+        width: 80%; /* Further adjust width for mobile */
+        padding: 10px; /* Further adjust padding for mobile */
+    }
+
+    .quote-overlay blockquote {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+}
+
+
+
+/* Services Container */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Service Item */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between service items */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Service Item */
+.service-item {
+    flex: 1 1 calc(50% - 20px); /* Default to two items per row */
+    height: auto; /* Allow height to adjust based on content */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #E0E0E0;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center items in the service item */
+}
+
+/* Link styling */
+.service-item a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    width: 100%; /* Ensure link covers the entire item */
+}
+
+/* Icon styling */
+.service-item i {
+    font-size: 3rem; /* Icon size */
+    color: #fa5751; /* Icon color */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+/* Title styling */
+.service-item h4 {
+    margin: 10px 0; /* Space above and below title */
+    color: #2C3E50; /* Title color */
+    font-size: 1.5rem; /* Title font size */
+}
+
+/* Paragraph styling */
+.service-item p {
+    line-height: 1.4; /* Line height for readability */
+    font-size: 0.9rem; /* Font size for paragraph */
+}
+
+/* Hover effect */
+.service-item:hover {
+    transform: scale(1.02); /* Slightly increase size on hover */
+    color: #FFFFFF; /* Change text color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .service-item {
+        flex: 1 1 calc(33.333% - 20px); /* Three items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        flex: 1 1 calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        flex: 1 1 100%; /* One item per row on extra small screens */
+    }
+
+    .service-item i {
+        font-size: 2rem; /* Smaller icon size on mobile */
+    }
+
+    .service-item h4 {
+        font-size: 1.25rem; /* Smaller title font size on mobile */
+    }
+
+    .service-item p {
+        font-size: 0.85rem; /* Smaller paragraph font size on mobile */
+    }
+}
+
+
+
